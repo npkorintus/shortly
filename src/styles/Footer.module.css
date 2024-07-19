@@ -1,0 +1,39 @@
+.logoContainer {
+  padding: 40px 0;
+}
+
+.socialLinks {
+  padding: 30px 0 60px;
+}
+
+.socialIcon {
+  margin: 0 16px;
+}
+
+/* Table and Desktop */
+@media only screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding-bottom: 64px;
+  }
+
+  .list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .sublist {
+    text-align: left;
+    margin-left: 56px;
+  }
+
+  .sublist > h4 {
+    padding-bottom: 16px;
+  }
+
+  .sublist > p {
+    margin: 8px 0;
+  }
+}
