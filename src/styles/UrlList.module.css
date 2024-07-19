@@ -1,0 +1,66 @@
+.urlList {
+  transform: translateY(40px);
+}
+
+.urlCard {
+  background: white;
+  border-radius: 8px;
+  margin: 16px;
+  padding: 8px;
+  display: block;
+  font-weight: 500;
+}
+
+.longUrl {
+  width: 100%;
+  text-align: left;
+  padding: 4px 0;
+}
+
+.shortUrl {
+  width: 100%;
+  text-align: left;
+  color: hsl(180, 66%, 49%);
+  padding: 4px 0;
+}
+
+.copyBtnContainer {
+  margin-top: 16px;
+}
+
+.btnCopy {
+  background: hsl(180, 66%, 49%);
+}
+
+.btnCopied {
+  background: hsl(257, 27%, 26%);
+}
+
+/* Table and Desktop */
+@media only screen and (min-width: 768px) {
+  .urlCard {
+    background: white;
+    margin: 16px;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .longUrl {
+    width: 40%;
+    text-align: left;
+    padding: 0;
+  }
+
+  .shortUrl {
+    width: 40%;
+    text-align: right ;
+    padding: 0;
+  }
+
+  .copyBtnContainer {
+    margin-top: 0;
+  }
+}

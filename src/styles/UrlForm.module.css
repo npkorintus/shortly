@@ -1,0 +1,50 @@
+.formContainer {
+  border-radius: 4px;
+  padding: 16px 0;
+  margin-right: 16px;
+  margin-left: 16px;
+  transform: translateY(56px);
+}
+
+.urlInput {
+  font-size: inherit;
+  padding: 0.6em 1.2em;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  width: 80%;
+}
+
+.btnSubmit {
+  width: 90%;
+  margin-top: 16px;
+}
+
+/* Table and Desktop */
+@media only screen and (min-width: 768px) {
+  .formContainer {
+    padding: 32px;
+  }
+
+  .urlForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .inputContainer {
+    width: 70%;
+  }
+
+  .submitContainer {
+    width: 20%;
+  }
+
+  .urlInput {
+    width: 100%;
+  }
+
+  .btnSubmit {
+    width: 100%;
+    margin-top: 0;
+  }
+}

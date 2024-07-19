@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
@@ -8,8 +9,29 @@ const inter = Inter({ subsets: ["latin"] });
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import UrlForm from "@/components/UrlForm";
+import UrlList from '@/components/UrlList';
+
+import useLocalStorage from '@/hooks/useLocalStorage';
 
 export default function Home() {
+  const [width, setWidth] = useState(null);
+  const [urlList, setUrlList] = useLocalStorage("urls", []);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+        window.removeEventListener('resize', handleWindowSizeChange);
+    }
+  }, []);
+
+  const isMobile = width < 768;
+  console.log(`isMobile: ${isMobile}`)
+
   return (
     <>
       <Head>
@@ -21,8 +43,9 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <Header />
         <Hero />
+        <UrlForm isMobile={isMobile} setUrlList={setUrlList} />
+        <UrlList isMobile={isMobile} urlList={urlList} />
         <section className='main-content'>
-          <div className='url-list'>url list</div>
           <h2>Advanced Statistics</h2>
           <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
           <div className='card-container'>cards</div>
