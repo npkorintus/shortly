@@ -21,6 +21,13 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <Header />
         <Hero />
+        <section className='main-content'>
+          <div className='url-list'>url list</div>
+          <h2>Advanced Statistics</h2>
+          <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+          <div className='card-container'>cards</div>
+          <div>cta</div>
+        </section>
         <Footer />
       </main>
     </>

@@ -1,0 +1,26 @@
+.card {
+  background: white;
+  margin: 24px 0;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.cardImg {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  background: hsl(257, 27%, 26%);
+  display: flex;
+}
+
+.cardImg > img {
+  padding: 24px;
+}
+
+/* Table and Desktop */
+@media only screen and (min-width: 768px) {
+  .card {
+    margin: 24px;
+  }
+}
