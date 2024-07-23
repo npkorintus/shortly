@@ -11,10 +11,22 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import UrlForm from "@/components/UrlForm";
 import UrlList from '@/components/UrlList';
+import Cta from '@/components/Cta';
 
 import useLocalStorage from '@/hooks/useLocalStorage';
 
-export default function Home() {
+import { getLocalData } from '@/lib/localData';
+
+export async function getStaticProps() {
+  const data = getLocalData();
+  console.log('data: ', data)
+  return {
+    props: { data }
+  }
+}
+
+export default function Home({ data }) {
+  console.log('data: ', data)
   const [width, setWidth] = useState(null);
   const [urlList, setUrlList] = useLocalStorage("urls", []);
 
@@ -49,7 +61,7 @@ export default function Home() {
           <h2>Advanced Statistics</h2>
           <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
           <div className='card-container'>cards</div>
-          <div>cta</div>
+          <Cta data={data.cta} />
         </section>
         <Footer />
       </main>
