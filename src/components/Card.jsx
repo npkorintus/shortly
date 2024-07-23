@@ -1,18 +1,14 @@
 import React from 'react';
-import Image from 'next/image';
-
 import styles from '../styles/Card.module.css';
 
-export default function Card(props) {
-  const { image, altText, heading, content } = props;
-
+export default function Card({ data }) {
   return (
     <div className={styles.card}>
       <div className={styles.cardImg}>
-        <Image alt={altText} src={image} />
+        <img alt={data.altText} src={data.image} />
       </div>
-      <h3 className={styles.cardHeading}>{heading}</h3>
-      <p className={styles.cardContent}>{content}</p>
+      <h3 className={styles.cardHeading}>{data.heading}</h3>
+      <p className={styles.cardContent}>{data.content}</p>
     </div>
   );
 }
