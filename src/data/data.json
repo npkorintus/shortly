@@ -22,9 +22,59 @@
       "altText": "fully customizable icon"
     }
   ],
-  "cta":
-    {
-      "heading": "Boost your links today",
-      "btnText": "Get Started"
-    }
+  "cta": {
+    "heading": "Boost your links today",
+    "btnText": "Get Started"
+  },
+  "footer": {
+    "sitemap": [
+      {
+        "category": "Features",
+        "links": [
+          "Link Shortening",
+          "Branded Links",
+          "Analytics"
+        ]
+      },
+      {
+        "category": "Resources",
+        "links": [
+          "Blog",
+          "Developers",
+          "Support"
+        ]
+      },
+      {
+        "category": "Company",
+        "links": [
+          "About",
+          "Our Team",
+          "Careers",
+          "Contact"
+        ]
+      }
+    ],
+    "socials": [
+      {
+        "id": 1,
+        "name": "Facebook",
+        "icon": "/icon-facebook.svg"
+      },
+      {
+        "id": 2,
+        "name": "Twitter",
+        "icon": "/icon-twitter.svg"
+      },
+      {
+        "id": 3,
+        "name": "Pinterest",
+        "icon": "/icon-pinterest.svg"
+      },
+      {
+        "id": 4,
+        "name": "Instagram",
+        "icon": "/icon-instagram.svg"
+      }
+    ]
+  }
 }

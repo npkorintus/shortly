@@ -1,3 +1,7 @@
+.footer {
+  background: hsl(260, 8%, 14%);
+}
+
 .logoContainer {
   padding: 40px 0;
 }
@@ -19,21 +23,21 @@
     padding-bottom: 64px;
   }
 
-  .list {
+  .sitemap {
     display: flex;
     justify-content: space-around;
   }
 
-  .sublist {
+  .category {
     text-align: left;
     margin-left: 56px;
   }
 
-  .sublist > h4 {
+  .category > h4 {
     padding-bottom: 16px;
   }
 
-  .sublist > p {
+  .category > p {
     margin: 8px 0;
   }
 }

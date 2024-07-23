@@ -66,7 +66,7 @@ export default function Home({ data }) {
           </div>
           <Cta data={data.cta} />
         </section>
-        <Footer />
+        <Footer data={data.footer} />
       </main>
     </>
   );
