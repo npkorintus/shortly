@@ -55,7 +55,7 @@ export default function Home({ data }) {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <Header />
-        <Hero />
+        <Hero {...data.hero} />
         <UrlForm isMobile={isMobile} setUrlList={setUrlList} />
         <UrlList isMobile={isMobile} urlList={urlList} />
         <section className='main-content'>
