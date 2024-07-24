@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from '../styles/Header.module.css';
 import shortlyLogo from '../../public/logo.svg';
 
-function Header() {
+export default function Header() {
   return (
     <header className='header'>
         <div className={`${styles.logoContainer} alignLeft`}>
@@ -14,5 +14,3 @@ function Header() {
       </header>
   );
 }
-
-export default Header;

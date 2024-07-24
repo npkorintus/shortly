@@ -5,7 +5,7 @@ import bgShortenDesktop from '../../public/bg-shorten-desktop.svg';
 
 import styles from '../styles/UrlForm.module.css';
 
-function UrlForm(props) {
+export default function UrlForm(props) {
   const { isMobile, setUrlList } = props;
   const [input, setInput] = useState('');
 
@@ -51,5 +51,3 @@ function UrlForm(props) {
     </section>
   );
 }
-
-export default UrlForm;

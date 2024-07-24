@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/Hero.module.css';
 
-function Hero(props) {
+export default function Hero(props) {
   const { heading, subheading, buttonText, image } = props;
 
   return (
@@ -21,5 +21,3 @@ function Hero(props) {
     </section>
   );
 }
-
-export default Hero;

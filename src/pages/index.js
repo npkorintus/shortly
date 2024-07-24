@@ -62,11 +62,11 @@ export default function Home({ data }) {
           <h2>Advanced Statistics</h2>
           <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
           <div className='card-container'>
-            {data.cards.map(card => <Card key={card.id} data={card} />)}
+            {data.cards.map(card => <Card key={card.id} {...card} />)}
           </div>
-          <Cta data={data.cta} />
+          <Cta {...data.cta} />
         </section>
-        <Footer data={data.footer} />
+        <Footer {...data.footer} />
       </main>
     </>
   );
