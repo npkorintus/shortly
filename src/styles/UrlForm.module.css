@@ -1,8 +1,8 @@
 .formContainer {
   border-radius: 4px;
   padding: 16px 0;
-  margin-right: 16px;
-  margin-left: 16px;
+  /* margin-right: 16px;
+  margin-left: 16px; */
   transform: translateY(56px);
 }
 
@@ -22,13 +22,14 @@
 /* Table and Desktop */
 @media only screen and (min-width: 768px) {
   .formContainer {
-    padding: 32px;
+    /* padding: 32px; */
   }
 
   .urlForm {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 8px 24px;
   }
 
   .inputContainer {

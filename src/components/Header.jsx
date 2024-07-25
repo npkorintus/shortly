@@ -6,7 +6,7 @@ import shortlyLogo from '../../public/logo.svg';
 
 export default function Header() {
   return (
-    <header className='header'>
+    <header className={`header narrowWidth`}>
         <div className={`${styles.logoContainer} alignLeft`}>
           <Image alt='shortly-logo' src={shortlyLogo} />
         </div>

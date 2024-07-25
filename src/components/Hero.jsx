@@ -5,7 +5,7 @@ export default function Hero(props) {
   const { heading, subheading, buttonText, image } = props;
 
   return (
-    <section className={styles.hero}>
+    <section className={`${styles.hero} narrowWidth`}>
       <div className={styles.heroImageContainer}>
         <img className={styles.heroImage} alt='Illustration working' src={image} />
       </div>

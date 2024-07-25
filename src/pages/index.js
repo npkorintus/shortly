@@ -57,8 +57,8 @@ export default function Home({ data }) {
         <Header />
         <Hero {...data.hero} />
         <UrlForm isMobile={isMobile} setUrlList={setUrlList} />
-        <UrlList isMobile={isMobile} urlList={urlList} />
         <section className='main-content'>
+          <UrlList isMobile={isMobile} urlList={urlList} />
           <h2>Advanced Statistics</h2>
           <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
           <div className='card-container'>

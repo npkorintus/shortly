@@ -31,7 +31,7 @@ export default function UrlForm(props) {
   }
 
   return (
-    <section className={styles.formContainer} style={{ background: `url(${isMobile ? bgShortenMobile : bgShortenDesktop})`, backgroundColor: 'hsl(257, 27%, 26%)' }}>
+    <section className={`${styles.formContainer} narrowWidth`} style={{ background: `url(${isMobile ? bgShortenMobile : bgShortenDesktop})`, backgroundColor: 'hsl(257, 27%, 26%)' }}>
       <form method='post' className={styles.urlForm} onSubmit={handleSubmit}>
         <div className={styles.inputContainer}>
           <input
@@ -40,7 +40,7 @@ export default function UrlForm(props) {
             name='url'
             value={input}
             placeholder='Shorten a link here...'
-            // required
+            required
             onChange={(e) => setInput(e.target.value)}
           />
         </div>

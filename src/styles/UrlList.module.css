@@ -36,13 +36,17 @@
   background: hsl(257, 27%, 26%);
 }
 
+.horizontalLine {
+  display: block;
+}
+
 /* Table and Desktop */
 @media only screen and (min-width: 768px) {
   .urlCard {
     background: white;
-    margin: 16px;
+    margin: 16px 0;
     border-radius: 8px;
-    padding: 8px;
+    padding: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,5 +66,10 @@
 
   .copyBtnContainer {
     margin-top: 0;
+    /* margin-left: 16px; */
+  }
+
+  .horizontalLine {
+    display: none;
   }
 }
