@@ -1,6 +1,6 @@
 .formContainer {
   border-radius: 4px;
-  padding: 16px 0;
+  /* padding: 16px 0; */
   /* margin-right: 16px;
   margin-left: 16px; */
   transform: translateY(56px);
@@ -17,6 +17,13 @@
 .btnSubmit {
   width: 90%;
   margin-top: 16px;
+}
+
+.errorText {
+  color: hsl(0, 87%, 67%);
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 25px;
 }
 
 /* Table and Desktop */

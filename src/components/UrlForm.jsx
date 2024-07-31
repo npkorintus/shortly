@@ -8,24 +8,44 @@ import styles from '../styles/UrlForm.module.css';
 export default function UrlForm(props) {
   const { isMobile, setUrlList } = props;
   const [input, setInput] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     const form = event.target;
+    console.log('form: ', form)
     const formData = new FormData(form);
+    console.log('formData: ', formData)
+    console.log('input: ', input)
+
+    // if (!input) {
+    //   setError('Please add a link');
+    //   throw new Error('Input field is empty')
+    // }
 
     fetch('/api/v1/shorten', { method: form.method, body: formData })
       .then(response => {
         if (!response.ok) {
-          throw new Error(`Network response was not ok.`);
+          if (input && response.status === 400) {
+            const message = `An error has occured: ${response.status}`;
+            setError('Please include http(s):// in your URL');
+            throw new Error(message)
+          }
+          else {
+            const message = `An error has occured: ${response.status}`;
+            setError(`An error has occured: ${response.status}`)
+            throw new Error(message);
+          }
         }
+
         console.log('response: ', response)
         return response.json();
       })
       .then(data => {
         console.log(data)
         setUrlList((prevUrls) => [...prevUrls, { longUrl: input, shortUrl: data.result_url }]);
+        setError();
       })
       .catch(error => console.error('Error: ', error));
   }
@@ -48,6 +68,7 @@ export default function UrlForm(props) {
           <button className={styles.btnSubmit} type='submit'>Shorten It!</button>
         </div>
       </form>
+        {error ? <small className={styles.errorText}>{error}</small> : null}
     </section>
   );
 }
